@@ -1,6 +1,7 @@
 package com.maryanto.dimas.training;
 
 import com.maryanto.dimas.training.configuration.SessionFactoryUtil;
+import com.maryanto.dimas.training.dao.BukuDao;
 import com.maryanto.dimas.training.entity.Buku;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -17,13 +18,21 @@ public class MainApplication {
         SessionFactoryUtil util = new SessionFactoryUtil();
         SessionFactory sessionFactory = util.getSessionFactory();
         Session session = sessionFactory.openSession();
+        BukuDao dao = new BukuDao(session);
         session.beginTransaction();
         log.info("hibernate connection open!");
 
 
-        Buku pemograman = new Buku("2344-1234324", "Bahasa Pemograman", "Dimas Maryanto", 2019, "INformatika");
-        session.save(pemograman);
+        Buku pemograman = new Buku(
+                "2344-1234324",
+                "Bahasa Pemograman",
+                "Dimas Maryanto",
+                2019,
+                "INformatika");
 
+        log.info("before save: {}", pemograman.toString());
+        pemograman = dao.save(pemograman);
+        log.info("after save: {}", pemograman.toString());
 
         session.getTransaction().commit();
 
