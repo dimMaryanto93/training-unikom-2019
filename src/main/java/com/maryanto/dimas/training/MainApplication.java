@@ -17,35 +17,7 @@ public class MainApplication {
 
         SessionFactoryUtil util = new SessionFactoryUtil();
         SessionFactory sessionFactory = util.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        BukuDao dao = new BukuDao(session);
-        session.beginTransaction();
-        log.info("hibernate connection open!");
 
-
-        Buku pemograman = new Buku(
-                "2344-1234324",
-                "Bahasa Pemograman",
-                "Dimas Maryanto",
-                2019,
-                "INformatika");
-
-        log.info("before save: {}", pemograman.toString());
-        pemograman = dao.save(pemograman);
-        log.info("after save: {}", pemograman.toString());
-
-        session.getTransaction().commit();
-
-        session.beginTransaction();
-        Buku bukuPemograman = dao.findById(pemograman.getId());
-        bukuPemograman.setNamaPengarang("Rega");
-        dao.update(bukuPemograman);
-
-        bukuPemograman = dao.findById(bukuPemograman.getId());
-        log.info("after update: {}", bukuPemograman);
-
-        session.getTransaction().commit();
-        session.close();
         sessionFactory.close();
 
         log.info("hibernate connection close!");
