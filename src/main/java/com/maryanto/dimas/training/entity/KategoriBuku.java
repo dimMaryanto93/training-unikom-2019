@@ -21,7 +21,7 @@ public class KategoriBuku {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "kode", nullable = false, unique = true, length = 64)
     private Integer id;
 
