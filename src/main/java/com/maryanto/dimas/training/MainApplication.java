@@ -1,9 +1,6 @@
 package com.maryanto.dimas.training;
 
 import com.maryanto.dimas.training.configuration.SessionFactoryUtil;
-import com.maryanto.dimas.training.dao.BukuDao;
-import com.maryanto.dimas.training.entity.Buku;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
