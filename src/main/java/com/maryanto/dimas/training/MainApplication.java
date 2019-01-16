@@ -1,6 +1,7 @@
 package com.maryanto.dimas.training;
 
 import com.maryanto.dimas.training.configuration.SessionFactoryUtil;
+import com.maryanto.dimas.training.entity.Buku;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -17,8 +18,14 @@ public class MainApplication {
         SessionFactory sessionFactory = util.getSessionFactory();
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-
         log.info("hibernate connection open!");
+
+
+        Buku pemograman = new Buku("2344-1234324", "Bahasa Pemograman", "Dimas Maryanto", 2019, "INformatika");
+        session.save(pemograman);
+
+
+        session.getTransaction().commit();
 
         session.close();
         sessionFactory.close();
