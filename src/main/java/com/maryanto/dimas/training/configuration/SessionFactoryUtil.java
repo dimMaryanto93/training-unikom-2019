@@ -13,6 +13,7 @@ public class SessionFactoryUtil {
     public SessionFactory getSessionFactory() {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure() // configures settings from hibernate.cfg.xml
+
                 .build();
         try {
             this.sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();

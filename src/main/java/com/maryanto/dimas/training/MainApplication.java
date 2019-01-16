@@ -23,7 +23,7 @@ public class MainApplication {
         session.close();
         sessionFactory.close();
 
-        log.info("hibernate conneciton close!");
+        log.info("hibernate connection close!");
 
     }
 }
