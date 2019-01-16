@@ -36,6 +36,15 @@ public class MainApplication {
 
         session.getTransaction().commit();
 
+        session.beginTransaction();
+        Buku bukuPemograman = dao.findById(pemograman.getId());
+        bukuPemograman.setNamaPengarang("Rega");
+        dao.update(bukuPemograman);
+
+        bukuPemograman = dao.findById(bukuPemograman.getId());
+        log.info("after update: {}", bukuPemograman);
+
+        session.getTransaction().commit();
         session.close();
         sessionFactory.close();
 
