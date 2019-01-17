@@ -1,4 +1,4 @@
-package com.maryanto.dimas.training.spring.beans;
+package com.maryanto.dimas.training.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
