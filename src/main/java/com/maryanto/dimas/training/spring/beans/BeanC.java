@@ -1,21 +1,11 @@
 package com.maryanto.dimas.training.spring.beans;
 
+import lombok.Data;
+
+@Data
 public class BeanC {
 
-    public BeanC(String namaLengkap) {
-        this.namaLengkap = namaLengkap;
-    }
-
-    public BeanC() {
-    }
 
     private String namaLengkap;
 
-    public String getNamaLengkap() {
-        return namaLengkap;
-    }
-
-    public void setNamaLengkap(String namaLengkap) {
-        this.namaLengkap = namaLengkap;
-    }
 }

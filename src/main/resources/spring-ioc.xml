@@ -4,4 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="classD" class="com.maryanto.dimas.training.spring.beans.BeanD">
+        <property name="nomor" value="25"/>
+    </bean>
+    <bean id="classC" class="com.maryanto.dimas.training.spring.beans.BeanC">
+        <property name="namaLengkap" value="Rega Rusti"/>
+    </bean>
+    <bean id="classB" class="com.maryanto.dimas.training.spring.beans.BeanB">
+        <constructor-arg ref="classC" name="c"/>
+        <constructor-arg ref="classD" name="d"/>
+    </bean>
+    <bean id="classA" class="com.maryanto.dimas.training.spring.beans.BeanA">
+        <property name="b" ref="classB"/>
+    </bean>
 </beans>
