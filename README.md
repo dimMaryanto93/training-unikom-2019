@@ -1,4 +1,4 @@
-# belajar hibernate
+# belajar Hibernate & Spring Framework
 
 
 ```mysql
