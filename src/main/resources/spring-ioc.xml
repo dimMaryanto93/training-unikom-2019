@@ -7,14 +7,28 @@
     <bean id="classD" class="com.maryanto.dimas.training.spring.beans.BeanD">
         <property name="nomor" value="25"/>
     </bean>
+
+    <bean id="classD1" class="com.maryanto.dimas.training.spring.beans.BeanD">
+        <property name="nomor" value="27"/>
+    </bean>
+
     <bean id="classC" class="com.maryanto.dimas.training.spring.beans.BeanC">
+        <constructor-arg value="12" name="no"/>
+
+        <property name="nomor" value="10"/>
         <property name="namaLengkap" value="Rega Rusti"/>
     </bean>
     <bean id="classB" class="com.maryanto.dimas.training.spring.beans.BeanB">
         <constructor-arg ref="classC" name="c"/>
-        <constructor-arg ref="classD" name="d"/>
+        <constructor-arg ref="classD1" name="d"/>
+
+        <property name="c" ref="classC"/>
     </bean>
     <bean id="classA" class="com.maryanto.dimas.training.spring.beans.BeanA">
         <property name="b" ref="classB"/>
     </bean>
+
+    <bean id="singletonApp" class="com.maryanto.dimas.training.spring.beans.SingleTonApplication" scope="singleton"/>
+
+    <bean id="prototypeApp" class="com.maryanto.dimas.training.spring.beans.PrototypeApplication" scope="prototype"/>
 </beans>
