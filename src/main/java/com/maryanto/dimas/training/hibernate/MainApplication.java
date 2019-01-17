@@ -1,6 +1,6 @@
-package com.maryanto.dimas.training;
+package com.maryanto.dimas.training.hibernate;
 
-import com.maryanto.dimas.training.configuration.SessionFactoryUtil;
+import com.maryanto.dimas.training.hibernate.configuration.SessionFactoryUtil;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

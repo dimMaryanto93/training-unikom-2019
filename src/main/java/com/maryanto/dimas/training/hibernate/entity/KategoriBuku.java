@@ -1,4 +1,4 @@
-package com.maryanto.dimas.training.entity;
+package com.maryanto.dimas.training.hibernate.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

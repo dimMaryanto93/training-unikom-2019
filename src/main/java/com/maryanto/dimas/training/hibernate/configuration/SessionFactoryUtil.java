@@ -1,4 +1,4 @@
-package com.maryanto.dimas.training.configuration;
+package com.maryanto.dimas.training.hibernate.configuration;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;

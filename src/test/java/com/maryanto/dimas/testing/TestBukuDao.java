@@ -1,10 +1,10 @@
 package com.maryanto.dimas.testing;
 
-import com.maryanto.dimas.training.configuration.SessionFactoryUtil;
-import com.maryanto.dimas.training.dao.BukuDao;
-import com.maryanto.dimas.training.dao.KategoriBukuDao;
-import com.maryanto.dimas.training.entity.Buku;
-import com.maryanto.dimas.training.entity.KategoriBuku;
+import com.maryanto.dimas.training.hibernate.configuration.SessionFactoryUtil;
+import com.maryanto.dimas.training.hibernate.dao.BukuDao;
+import com.maryanto.dimas.training.hibernate.dao.KategoriBukuDao;
+import com.maryanto.dimas.training.hibernate.entity.Buku;
+import com.maryanto.dimas.training.hibernate.entity.KategoriBuku;
 import junit.framework.TestCase;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;

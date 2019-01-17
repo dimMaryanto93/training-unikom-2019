@@ -1,6 +1,6 @@
-package com.maryanto.dimas.training.dao;
+package com.maryanto.dimas.training.hibernate.dao;
 
-import com.maryanto.dimas.training.entity.KategoriBuku;
+import com.maryanto.dimas.training.hibernate.entity.KategoriBuku;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.MatchMode;

@@ -1,6 +1,6 @@
-package com.maryanto.dimas.training.dao;
+package com.maryanto.dimas.training.hibernate.dao;
 
-import com.maryanto.dimas.training.entity.Buku;
+import com.maryanto.dimas.training.hibernate.entity.Buku;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
