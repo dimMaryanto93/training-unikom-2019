@@ -5,6 +5,7 @@ import com.maryanto.dimas.training.spring.beans.BeanB;
 import com.maryanto.dimas.training.spring.beans.BeanC;
 import com.maryanto.dimas.training.spring.beans.BeanD;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,12 @@ public class MainApplication {
         return new BeanD(20);
     }
 
+
+    @Bean
+    public BeanD beanD1() {
+        return new BeanD(21);
+    }
+
     @Bean
     public BeanC beanC() {
         return new BeanC(10);
@@ -26,8 +33,7 @@ public class MainApplication {
 
     @Bean
     public BeanB beansB(
-            BeanC c,
-            BeanD d) {
+            BeanC c,@Qualifier("beanD1") BeanD d) {
         return new BeanB(c, d);
     }
 
